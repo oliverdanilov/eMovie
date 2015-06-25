@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{2432BC40-DA56-4DA2-B7AF-8C0CA4D14CB7}</ProjectGuid>
+    <ProjectGuid>{87C94332-B03E-4D56-B037-916A1BB7269C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>eMovie.Core</RootNamespace>
-    <AssemblyName>eMovie.Core</AssemblyName>
+    <RootNamespace>eMovie.AppServices</RootNamespace>
+    <AssemblyName>eMovie.AppServices</AssemblyName>
     <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -39,13 +39,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Entities\BaseEntity.cs" />
-    <Compile Include="Entities\Genre.cs" />
-    <Compile Include="Entities\Movie.cs" />
-    <Compile Include="Interfaces\IBaseRepository.cs" />
-    <Compile Include="Interfaces\IGenreRepository.cs" />
-    <Compile Include="Interfaces\IMovieRepository.cs" />
+    <Compile Include="DTOs\GenreDto.cs" />
+    <Compile Include="GenreService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\eMovie.Core\eMovie.Core.csproj">
+      <Project>{2432bc40-da56-4da2-b7af-8c0ca4d14cb7}</Project>
+      <Name>eMovie.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\eMovie.Infrastructure.Data\eMovie.Infrastructure.Data.csproj">
+      <Project>{c4a85607-84cb-4f15-8789-6049926795ab}</Project>
+      <Name>eMovie.Infrastructure.Data</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

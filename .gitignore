@@ -1,3 +1,7 @@
 eMovie/eMovie/eMovie.Core/obj/
 eMovie/eMovie/packages/
 eMovie/eMovie/eMovie.Infrastructure.Data/obj/
+eMovie/eMovie/eMovie.AppServices/bin
+eMovie/eMovie/eMovie.AppServices/obj/
+eMovie/eMovie/eMovie.Infrastructure.Data/bin/
+eMovie/eMovie/eMovie.Web/bin/

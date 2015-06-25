@@ -10,5 +10,7 @@ namespace eMovie.Core.Interfaces
     public interface IBaseRepository<TEntity>
         where TEntity : BaseEntity
     {
+        void Add(TEntity entity);
+        void Save();
     }
 }
