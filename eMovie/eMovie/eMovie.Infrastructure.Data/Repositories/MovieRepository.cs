@@ -8,12 +8,17 @@ using System.Threading.Tasks;
 
 namespace eMovie.Infrastructure.Data.Repositories
 {
-    public class GenreRepository : BaseRepository<Genre>, IGenreRepository
+    public class MovieRepository : BaseRepository<Movie>, IMovieRepository
     {
-        public GenreRepository(eMovieDbContext context)
-            :base(context)
+        public MovieRepository(eMovieDbContext context)
+            : base(context)
         {
 
+        }
+
+        public int Count()
+        {
+            return _context.Movies.Count();
         }
     }
 }

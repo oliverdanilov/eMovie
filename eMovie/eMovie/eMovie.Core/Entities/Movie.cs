@@ -10,6 +10,6 @@ namespace eMovie.Core.Entities
     {
         public string Title { get; set; }
         public string Description { get; set; }
-        public Genre Genre { get; set; }
+        public virtual Genre Genre { get; set; }
     }
 }

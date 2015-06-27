@@ -9,6 +9,5 @@ namespace eMovie.Core.Interfaces
 {
     public interface IGenreRepository : IBaseRepository<Genre>
     {
-        int Count();
     }
 }

@@ -24,5 +24,15 @@ namespace eMovie.AppServices
             _genreRepository.Add(entity);
             _genreRepository.Save();
         }
+
+        public List<GenreDto> GetAll()
+        {
+            var all = _genreRepository.GetAll();
+            return all.Select(x => new GenreDto()
+                {
+                    Id = x.id,
+                    Name = x.Name
+                }).ToList();
+        }
     }
 }

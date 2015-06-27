@@ -11,6 +11,8 @@ namespace eMovie.Core.Interfaces
         where TEntity : BaseEntity
     {
         void Add(TEntity entity);
+        TEntity GetById(int id);
+        List<TEntity> GetAll();
         void Save();
     }
 }

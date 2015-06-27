@@ -35,7 +35,7 @@ namespace eMovie.Web.Controllers
 
         public ActionResult Index()
         {
-            List<GenreDto> list = new List<GenreDto>();
+            List<GenreDto> list = _genreService.GetAll();
             return View(list);
         }
     }
